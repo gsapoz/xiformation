@@ -1,0 +1,30 @@
+{
+  "name": "xiformation",
+  "version": "1.0.0",
+  "description": "An Interactive Lineup builder for europe's top 5 football leagues, powered by Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsapoz/xiformation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsapoz/xiformation/issues"
+  },
+  "homepage": "https://github.com/gsapoz/xiformation#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fpl-api": "^4.0.4",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
