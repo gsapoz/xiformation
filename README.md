@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# 11Formation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered by Javascript. 
+
+## Features 
+- User console featuring past created squads, with private/public toggle and sharing commands 
+- Player search, with smart routes so you can pull up player stats via address bar (ie: https://11formation/player/Messi)
+
+## Task List
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the client directory, you can run:
 
 ### `npm start`
 
