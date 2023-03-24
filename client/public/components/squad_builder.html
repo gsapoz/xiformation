@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pitch">
+		<div class="player" style="left:8%" id="LW"><img src="https://d153u3nqeqj1g3.cloudfront.net/1920.png"/><a>Mudryk</a></div>
+		<div class="player" style="left: 40%" id="CF"><img src="https://d153u3nqeqj1g3.cloudfront.net/106.png"/>Havertz</div>
+		<div class="player" style="left: 72%" id="RW"><img src="https://d153u3nqeqj1g3.cloudfront.net/864.png"/>Madueke</div>
+		<div class="player" style="left: 12%" id="LCM"><img src="https://d153u3nqeqj1g3.cloudfront.net/110.png"/>Mount</div>
+		<div class="player" style="left: 40%" id="CM"><img src="https://d153u3nqeqj1g3.cloudfront.net/109.png"/>Rice</div>
+		<div class="player" style="left: 68%" id="RCM"><img src="https://d153u3nqeqj1g3.cloudfront.net/690.png"/>Enzo</div>
+		<div class="player" style="left: 6%" id="LB"><img src="https://d153u3nqeqj1g3.cloudfront.net/218.png"/>Chilwell</div>
+		<div class="player" style="left: 28%" id="LCB"><img src="https://d153u3nqeqj1g3.cloudfront.net/888.png"/>Badiashile</div>
+		<div class="player" style="left: 50%" id="RCB"><img src="https://d153u3nqeqj1g3.cloudfront.net/519.png"/>Fofana</div>
+		<div class="player" style="left: 72%" id="RB"><img src="https://d153u3nqeqj1g3.cloudfront.net/103.png"/>James</div>
+		<div class="player" style="left: 40%" id="GK"><img src="https://d153u3nqeqj1g3.cloudfront.net/45.png"/>Mendy</div>
+      </div>
+    </div>
+    <style>
+      .container {
+        width: 500px;
+        height: 712px;
+        background-color: silver;
+      }
+
+      .pitch {
+        width: 488px;
+        height: 714px;
+        padding: 6px;
+        background-color: green;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: center;
+        position: relative;
+        background: url('../images/pitch.jpeg');
+      }
+
+      .player img {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+      }
+	  
+	  .player {
+	  	position: absolute;
+	  	text-align: center;
+	  	border: 1px solid silver;
+	  	width: 100px;
+	  	height: 125px;
+	  	background-color: black;
+	  	color: silver;
+	  }
+	  
+      #LW, #CF, #RW {
+      	top: 100px;
+      }
+      
+      #LCM, #CM, #RCM {
+      	top: 34%;
+      }
+      
+      #LB, #LCB, #RCB, #RB {
+      	top: 54%;
+      }
+      
+      #GK {
+      	top: 73%;
+      }
+
+      
+    
+      
+    </style>
+  </body>
+</html>
+
