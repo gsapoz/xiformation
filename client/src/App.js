@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function App() {
-  const [backEndData, setBackendData] = useState([{}]);
-
+  const [Leagues, setBackendData] = useState([{}]);
+  var league_names = [];
   useEffect(() => {
     fetch("/api")
       .then((response) => response.json())
@@ -12,13 +12,17 @@ function App() {
   }, []);
 
   return (
+    //To-Do: css file, player widget, search feature
     <div>
-      <p></p>
-      {/* {typeof backEndData.test === "undefined" ? ( //init: proxy test
-          <p>Loading...</p>
-        ) : (
-          backEndData.test.map((test, i) => <p key={i}>{test}</p>)
-        )} */}
+      <p>League index: </p>
+      {typeof Leagues === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        //else
+        Leagues.map((league) => {
+          return <h1>{league.name}</h1>;
+        })
+      )}
     </div>
   );
 }
