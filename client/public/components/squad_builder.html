@@ -8,17 +8,50 @@
   <body>
     <div class="container">
       <div class="pitch">
-		<div class="player" style="left:8%" id="LW"><img src="https://d153u3nqeqj1g3.cloudfront.net/1920.png"/><a>Mudryk</a></div>
-		<div class="player" style="left: 40%" id="CF"><img src="https://d153u3nqeqj1g3.cloudfront.net/106.png"/>Havertz</div>
-		<div class="player" style="left: 72%" id="RW"><img src="https://d153u3nqeqj1g3.cloudfront.net/864.png"/>Madueke</div>
-		<div class="player" style="left: 12%" id="LCM"><img src="https://d153u3nqeqj1g3.cloudfront.net/110.png"/>Mount</div>
-		<div class="player" style="left: 40%" id="CM"><img src="https://d153u3nqeqj1g3.cloudfront.net/109.png"/>Rice</div>
-		<div class="player" style="left: 68%" id="RCM"><img src="https://d153u3nqeqj1g3.cloudfront.net/690.png"/>Enzo</div>
-		<div class="player" style="left: 6%" id="LB"><img src="https://d153u3nqeqj1g3.cloudfront.net/218.png"/>Chilwell</div>
-		<div class="player" style="left: 28%" id="LCB"><img src="https://d153u3nqeqj1g3.cloudfront.net/888.png"/>Badiashile</div>
-		<div class="player" style="left: 50%" id="RCB"><img src="https://d153u3nqeqj1g3.cloudfront.net/519.png"/>Fofana</div>
-		<div class="player" style="left: 72%" id="RB"><img src="https://d153u3nqeqj1g3.cloudfront.net/103.png"/>James</div>
-		<div class="player" style="left: 40%" id="GK"><img src="https://d153u3nqeqj1g3.cloudfront.net/45.png"/>Mendy</div>
+        <div class="player" style="left: 40%; top: 10px" id="LW">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/1920.png" />
+          <a>Mudryk</a>
+        </div>
+        <div class="player" style="left: 68%; top: 10px" id="CF">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/106.png" />
+          <a>Havertz</a>
+        </div>
+        <div class="player" style="left: 12%; top: 10px" id="RW">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/864.png" />
+          <a>Madueke</a>
+        </div>
+        <div class="player" style="left: 6%; top: 20%" id="LCM">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/110.png" />
+          <a>Mount</a>
+        </div>
+        <div class="player" style="left: 40%; top: 20%" id="CM">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/109.png" />
+          <a>Rice</a>
+        </div>
+        <div class="player" style="left: 72%; top: 20%" id="RCM">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/690.png" />
+          <a>Enzo</a>
+        </div>
+        <div class="player" style="left: 40%; top: 38%" id="LB">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/218.png" />
+          <a>Chilwell</a>
+        </div>
+        <div class="player" style="left: 12%; top: 57%" id="LCB">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/888.png" />
+          <a>Badiashile</a>
+        </div>
+        <div class="player" style="left: 40%; top: 57%" id="RCB">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/519.png" />
+          <a>Fofana</a>
+        </div>
+        <div class="player" style="left: 68%; top: 57%" id="RB">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/103.png" />
+          <a>James</a>
+        </div>
+        <div class="player" style="left: 40%; top: 76%" id="GK">
+          <img src="https://d153u3nqeqj1g3.cloudfront.net/45.png" />
+          <a>Mendy</a>
+        </div>
       </div>
     </div>
     <style>
@@ -37,7 +70,7 @@
         background-repeat: no-repeat;
         background-size: center;
         position: relative;
-        background: url('../images/pitch.jpeg');
+        background: url("../images/pitch.jpeg");
       }
 
       .player img {
@@ -45,37 +78,16 @@
         height: 100px;
         background-color: white;
       }
-	  
-	  .player {
-	  	position: absolute;
-	  	text-align: center;
-	  	border: 1px solid silver;
-	  	width: 100px;
-	  	height: 125px;
-	  	background-color: black;
-	  	color: silver;
-	  }
-	  
-      #LW, #CF, #RW {
-      	top: 100px;
-      }
-      
-      #LCM, #CM, #RCM {
-      	top: 34%;
-      }
-      
-      #LB, #LCB, #RCB, #RB {
-      	top: 54%;
-      }
-      
-      #GK {
-      	top: 73%;
-      }
 
-      
-    
-      
+      .player {
+        position: absolute;
+        text-align: center;
+        border: 1px solid silver;
+        width: 100px;
+        height: 125px;
+        background-color: black;
+        color: silver;
+      }
     </style>
   </body>
 </html>
-
