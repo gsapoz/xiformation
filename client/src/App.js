@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Pitch from "./components/Pitch";
 
 function App() {
   const [Leagues, setBackendData] = useState([{}]);
@@ -12,17 +13,16 @@ function App() {
   }, []);
 
   return (
-    //To-Do: css file, player widget, search feature
     <div>
-      <p>League index: </p>
+      <Pitch formation={"433"} />
+      {/* <p>League index: </p>
       {typeof Leagues === "undefined" ? (
         <p>Loading...</p>
       ) : (
-        //else
         Leagues.map((league) => {
           return <h1>{league.name}</h1>;
         })
-      )}
+      )} */}
     </div>
   );
 }

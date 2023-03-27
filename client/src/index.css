@@ -1,13 +1,51 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+Button {
+  border: 10px solid red;
+}
+
+.container {
+  width: 500px;
+  height: 712px;
+  background-color: silver;
+}
+
+.pitch {
+  width: 488px;
+  height: 714px;
+  padding: 6px;
+  background-color: green;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  position: relative;
+  background: url("./pitch.jpeg");
+}
+
+.player img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.player {
+  position: absolute;
+  text-align: center;
+  border: 1px solid silver;
+  width: 100px;
+  height: 125px;
+  background-color: black;
+  color: silver;
 }
