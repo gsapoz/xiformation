@@ -1,32 +1,32 @@
-import Team from "./Team";
+import Player from "./Player";
 
 function Builder({ data }) {
-  const attributes = {};
-  // let selected_formation = "433";
+  // let selected_formation = "433"; //Must be user submitted
+  /** TO-DO:
+   * 1. The return logic below should be done inside "Team.jsx"
+   * 2. This class (Builder.js) should be a form, which takes user input
+   *      (formation & player names) and passes it to pitch.jsx
+   * 3. Once thats settled, we need to finish editing topfive.json, which
+   *      is missing Player names & ids
+   * 4. And once thats done, we need to gloss over formations.json one more
+   *      time, its missing positions here and there
+   * 5. After that, all thats left to do is to style the squad builder page
+   */
 
   return (
     <div>
       {data.map((formation) =>
         formation.formation === "433" ? (
           <div class="pitch">
-            <ul>
-              {formation.positions.map(
-                (position, index) => (attributes[`key${index}`] = { position })
-                // <li key={position + index}>{position}</li>
-              )}
-
-              {formation.left.map(
-                (left, index) => (attributes[`key${index}`] = { left })
-                // <li key={left + index}>{left}</li>
-              )}
-
-              {formation.top.map(
-                (top, index) => (attributes[`key${index}`] = { top })
-                // <li key={top + index}>{top}</li>
-              )}
-            </ul>
-
-            <Team props={JSON.stringify(attributes)} />
+            {formation.positions.map((position, index) => (
+              <Player
+                left={formation.left[index]}
+                top={formation.top[index]}
+                position={formation.positions[index]}
+                name={"Mudrk"}
+                id={"1920"}
+              />
+            ))}
           </div>
         ) : (
           <p></p>
@@ -37,28 +37,3 @@ function Builder({ data }) {
 }
 
 export default Builder;
-
-//  return (
-//   <div class="section">
-//     {data.map((item) => (
-//       <div class="container">
-//         {item.formation === "433" ? (
-//           <div class="pitch">
-//             <Player
-//               left={item.left}
-//               top={item.top}
-//               position={"LW"}
-//               name={"Mudrk"}
-//               id={"1920"}
-//             />
-//           </div>
-//         ) : (
-//           <p>
-//             {item.left}
-//             <br></br>
-//           </p>
-//         )}
-//       </div>
-//     ))}
-//   </div>
-// );

@@ -19,6 +19,8 @@ app.get("/formations", (req, res) => {
   fs.readFile("components/formations.json", "utf8", function (err, data) {
     if (err) throw err;
     data = JSON.parse(data);
+    const formation = data.find((formation) => formation.id === "443");
+    // res.json(formation);
     res.json(data);
   });
 });
