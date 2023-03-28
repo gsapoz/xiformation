@@ -15,6 +15,14 @@ app.get("/api", (req, res) => {
   });
 });
 
+app.get("/formations", (req, res) => {
+  fs.readFile("components/formations.json", "utf8", function (err, data) {
+    if (err) throw err;
+    data = JSON.parse(data);
+    res.json(data);
+  });
+});
+
 app.listen(5000, () => {
   console.log("Server started on port 5000");
 });

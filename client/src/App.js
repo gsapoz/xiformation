@@ -1,30 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Pitch from "./components/Pitch";
+import Builder from "./components/Builder";
 
 function App() {
-  const [Leagues, setBackendData] = useState([{}]);
-  var league_names = [];
+  const [Formations, setBackendData] = useState([{}]);
+
   useEffect(() => {
-    fetch("/api")
+    fetch("/formations")
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data);
       });
   }, []);
 
-  return (
-    <div>
-      <Pitch formation={"433"} />
-      {/* <p>League index: </p>
-      {typeof Leagues === "undefined" ? (
-        <p>Loading...</p>
-      ) : (
-        Leagues.map((league) => {
-          return <h1>{league.name}</h1>;
-        })
-      )} */}
-    </div>
-  );
+  return <Builder data={Formations} />;
 }
 
 export default App;
