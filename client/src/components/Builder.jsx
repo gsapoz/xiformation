@@ -6,9 +6,7 @@ function Builder({ data }) {
    * 1. The return logic below should be done inside "Team.jsx"
    * 2. This class (Builder.js) should be a form, which takes user input
    *      (formation & player names) and passes it to pitch.jsx
-   * 3. Once thats settled, we need to finish editing topfive.json, which
-   *      is missing Player names & ids
-   * 4. And once thats done, we need to gloss over formations.json one more
+   * 3. And once thats done, we need to gloss over formations.json one more
    *      time, its missing positions here and there
    * 5. After that, all thats left to do is to style the squad builder page
    */
