@@ -38,7 +38,7 @@ code {
   margin-top: 50px;
 }
 
-.container {
+.pitch-container {
   width: 500px;
   height: 712px;
   background-color: silver;
@@ -46,9 +46,9 @@ code {
   position: relative;
 }
 
-.form-holder {
+.form-container {
   width: 590px;
-  height: 714px;
+  height: 726px;
   background-color: #d1d1d1;
   display: inline-block;
   margin-left: 10px;

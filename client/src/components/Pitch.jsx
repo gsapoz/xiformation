@@ -4,7 +4,7 @@ import "../index.css";
 
 const Pitch = (props) => {
   return (
-    <div class="container">
+    <div class="pitch-container">
       <div class="pitch">
         <Player
           left={"8%"}

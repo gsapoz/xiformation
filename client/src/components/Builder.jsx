@@ -1,3 +1,4 @@
+import Pitch from "./Pitch";
 import Player from "./Player";
 
 function Builder({ data }) {
@@ -15,16 +16,21 @@ function Builder({ data }) {
     <div>
       {data.map((formation) =>
         formation.formation === "433" ? (
-          <div class="pitch">
-            {formation.positions.map((position, index) => (
-              <Player
-                left={formation.left[index]}
-                top={formation.top[index]}
-                position={formation.positions[index]}
-                name={"Mudrk"}
-                id={"1920"}
-              />
-            ))}
+          <div class="section">
+            <div class="pitch-container">
+              <div class="pitch">
+                {formation.positions.map((position, index) => (
+                  <Player
+                    left={formation.left[index]}
+                    top={formation.top[index]}
+                    position={formation.positions[index]}
+                    name={"Mudrk"}
+                    id={"1920"}
+                  />
+                ))}
+              </div>
+            </div>
+            <div class="form-container">hey</div>
           </div>
         ) : (
           <p></p>

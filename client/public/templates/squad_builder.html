@@ -8,138 +8,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
- 
-  <div class="section">
-    <div class="container">
-      <div class="pitch">
-        <div class="player" style="left: 40%; top: 10px" id="LW">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/1920.png" />
-          <a>Mudryk</a>
+    <div class="section">
+      <div class="pitch-container">
+        <div class="pitch">
+          <div class="player" style="left: 40%; top: 10px" id="LW">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/1920.png" />
+            <a>Mudryk</a>
+          </div>
+          <div class="player" style="left: 68%; top: 10px" id="CF">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/106.png" />
+            <a>Havertz</a>
+          </div>
+          <div class="player" style="left: 12%; top: 10px" id="RW">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/864.png" />
+            <a>Madueke</a>
+          </div>
+          <div class="player" style="left: 6%; top: 20%" id="LCM">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/110.png" />
+            <a>Mount</a>
+          </div>
+          <div class="player" style="left: 40%; top: 20%" id="CM">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/109.png" />
+            <a>Rice</a>
+          </div>
+          <div class="player" style="left: 72%; top: 20%" id="RCM">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/690.png" />
+            <a>Enzo</a>
+          </div>
+          <div class="player" style="left: 40%; top: 38%" id="LB">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/218.png" />
+            <a>Chilwell</a>
+          </div>
+          <div class="player" style="left: 12%; top: 57%" id="LCB">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/888.png" />
+            <a>Badiashile</a>
+          </div>
+          <div class="player" style="left: 40%; top: 57%" id="RCB">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/519.png" />
+            <a>Fofana</a>
+          </div>
+          <div class="player" style="left: 68%; top: 57%" id="RB">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/103.png" />
+            <a>James</a>
+          </div>
+          <div class="player" style="left: 40%; top: 76%" id="GK">
+            <img src="https://d153u3nqeqj1g3.cloudfront.net/45.png" />
+            <a>Mendy</a>
+          </div>
+          <form>
+            <select id="my-dropdown" name="color">
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </form>
         </div>
-        <div class="player" style="left: 68%; top: 10px" id="CF">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/106.png" />
-          <a>Havertz</a>
-        </div>
-        <div class="player" style="left: 12%; top: 10px" id="RW">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/864.png" />
-          <a>Madueke</a>
-        </div>
-        <div class="player" style="left: 6%; top: 20%" id="LCM">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/110.png" />
-          <a>Mount</a>
-        </div>
-        <div class="player" style="left: 40%; top: 20%" id="CM">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/109.png" />
-          <a>Rice</a>
-        </div>
-        <div class="player" style="left: 72%; top: 20%" id="RCM">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/690.png" />
-          <a>Enzo</a>
-        </div>
-        <div class="player" style="left: 40%; top: 38%" id="LB">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/218.png" />
-          <a>Chilwell</a>
-        </div>
-        <div class="player" style="left: 12%; top: 57%" id="LCB">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/888.png" />
-          <a>Badiashile</a>
-        </div>
-        <div class="player" style="left: 40%; top: 57%" id="RCB">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/519.png" />
-          <a>Fofana</a>
-        </div>
-        <div class="player" style="left: 68%; top: 57%" id="RB">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/103.png" />
-          <a>James</a>
-        </div>
-        <div class="player" style="left: 40%; top: 76%" id="GK">
-          <img src="https://d153u3nqeqj1g3.cloudfront.net/45.png" />
-          <a>Mendy</a>
-        </div>
-        
       </div>
-      
-      
+      <div class="form-container">
+        <form>
+          <label for="name" style="margin-top: 100px">LW</label>
+          <input type="text" id="LW" />
+
+          <label for="email">CF</label>
+          <input type="text" id="CF" />
+
+          <label for="phone">RW</label>
+          <input type="text" id="RW" />
+
+          <label for="address1">LCM</label>
+          <input type="text" id="LCM" />
+
+          <label for="address2">CM</label>
+          <input type="text" id="CM" />
+
+          <label for="city">RCM</label>
+          <input type="text" id="RCM" />
+
+          <label for="state">LB</label>
+          <input type="text" id="LB" />
+
+          <label for="zip">LCB</label>
+          <input type="text" id="LCB" />
+
+          <label for="country">RCB</label>
+          <input type="text" id="RCB" />
+
+          <label for="username">RB</label>
+          <input type="text" id="RB" />
+
+          <label for="password">GK</label>
+          <input type="text" id="GK" />
+        </form>
+        <h4>XI Formation!</h4>
+      </div>
     </div>
-    <div class="form-holder"> </div>
-    </div>
-    
+
     <style>
-    
-    body {
-  margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+      body {
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+          monospace;
+      }
 
-.player img {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-}
+      .player img {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+      }
 
-.player {
-  position: absolute;
-  text-align: center;
-  border: 1px solid silver;
-  width: 100px;
-  height: 125px;
-  background-color: black;
-  color: silver;
-}
+      .player {
+        position: absolute;
+        text-align: center;
+        border: 1px solid silver;
+        width: 100px;
+        height: 125px;
+        background-color: black;
+        color: silver;
+      }
 
+      #my-dropdown {
+        position: relative;
+        border: 1px solid red;
+        top: 680px;
+        left: 2px;
+        width: 87px;
+        height: 27px;
+      }
+      .section {
+        width: 1100px;
+        height: 100%;
+        padding: 10px;
+        margin: auto;
+        margin-top: 50px;
+      }
 
-.section {
-	width: 1100px;
-	height: 100%;
-	padding: 10px;
-	margin: auto;
-	margin-top: 50px;
-	
-}
+      .pitch-container {
+        width: 500px;
+        height: 726px;
+        background-color: silver;
+        display: inline-block;
+        position: relative;
+        box-shadow: 0px 0px 9px 3px rgba(207, 207, 207, 1);
+      }
 
-.container {
-  width: 500px;
-  height: 712px;
-  background-color: silver;
-  display: inline-block;
-  position: relative;
-}
+      .form-container {
+        width: 590px;
+        height: 726px;
+        background-color: #fff;
+        display: inline-block;
+        margin-left: 10px;
+        position: absolute;
+        box-shadow: 0px 0px 9px 3px rgba(207, 207, 207, 1);
+      }
 
-.form-holder {
-	width: 590px;
-  height: 714px;
-  background-color: #D1D1D1;
-  display: inline-block;
-  margin-left: 10px;
-  position: absolute;
-}
+      .pitch {
+        width: 488px;
+        height: 714px;
+        padding: 6px;
+        background-color: green;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: center;
+        position: relative;
+        background: url("./pitch.jpeg");
+      }
 
-.pitch {
-  width: 488px;
-  height: 714px;
-  padding: 6px;
-  background-color: green;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: center;
-  position: relative;
-  background: url("./pitch.jpeg");
-}
+      form * {
+        margin-top: 5px;
+        padding: 8px;
+      }
 
+      form label {
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+      }
 
+      form input[type="text"] {
+        display: inline-block;
+        width: 77%;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+      }
 
+      form input[type="submit"] {
+      }
 
-
-
+      .form-container h4 {
+        padding: 10px;
+        margin-left: 10px;
+        width: 90%;
+        text-align: center;
+        font-family: "Lucida Handwriting", cursive;
+        margin-top: 100px;
+      }
     </style>
   </body>
 </html>
