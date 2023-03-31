@@ -1,9 +1,19 @@
+import React, { useRef, useState } from "react";
+
 function Form({ formation, data, list }) {
+  const inputRef = useRef(null);
+  const [value, setValue] = useState("");
+
+  function handleChange() {
+    const currentValue = inputRef.current.value;
+    setValue(currentValue);
+  }
+
   return (
     <div class="form-container">
       <form>
-        <label for="name">LW</label>
-        <input type="text" id="LW" value={data[250].name} />
+        <label for="email">LW</label>
+        <input type="text" id="CF" value={data[0].name} />
 
         <label for="email">CF</label>
         <input type="text" id="CF" value={data[0].name} />
