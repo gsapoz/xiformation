@@ -2,20 +2,33 @@ import React from "react";
 import Player from "./Player";
 import "../index.css";
 
-const Pitch = (props) => {
+function Pitch({ data }) {
+  /** */
   return (
-    <div class="pitch-container">
-      <div class="pitch">
+    <div class="formation-container">
+      {data.positions.map((position, index) => (
         <Player
-          left={"8%"}
-          top={"80px"}
-          position={"LW"}
+          left={data.left[index]}
+          top={data.top[index]}
+          position={data.positions[index]}
           name={"Mudrk"}
           id={"1920"}
         />
-      </div>
+      ))}
+      <form>
+        <select id="formation-picker" name="color">
+          <option value="433">433</option>
+          <option value="442">442</option>
+          <option value="4312">4312</option>
+          <option value="433">4141</option>
+          <option value="442">343</option>
+          <option value="4312">3412</option>
+          <option value="4312">3133</option>
+          <option value="4312">3331</option>
+        </select>
+      </form>
     </div>
   );
-};
+}
 
 export default Pitch;

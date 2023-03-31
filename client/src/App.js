@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Builder from "./components/Builder";
+import Form from "./components/Form";
 
 function App() {
   const [Formations, setBackendData] = useState([{}]);
@@ -12,7 +13,12 @@ function App() {
       });
   }, []);
 
-  return <Builder data={Formations} />;
+  return (
+    <div class="section">
+      <Builder data={Formations} />
+      <Form data={Formations} />
+    </div>
+  );
 }
 
 export default App;

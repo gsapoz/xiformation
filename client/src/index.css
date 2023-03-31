@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+.hidden {
+  display: none;
+}
 /* Player.jsx */
 .player img {
   width: 100px;
@@ -36,23 +39,26 @@ code {
   padding: 10px;
   margin: auto;
   margin-top: 50px;
+  box-shadow: 0px 0px 9px 3px rgba(207, 207, 207, 1);
 }
 
 .pitch-container {
   width: 500px;
-  height: 712px;
+  height: 726px;
   background-color: silver;
   display: inline-block;
   position: relative;
+  box-shadow: 0px 0px 9px 3px rgba(207, 207, 207, 1);
 }
 
 .form-container {
   width: 590px;
   height: 726px;
-  background-color: #d1d1d1;
+  background-color: #fff;
   display: inline-block;
   margin-left: 10px;
   position: absolute;
+  box-shadow: 0px 0px 9px 3px rgba(207, 207, 207, 1);
 }
 
 /* Pitch.jsx */
@@ -68,4 +74,47 @@ code {
   background: url("./pitch.jpeg");
 }
 
-/* Form.jsx (TO-DO) */
+#formation-picker::-ms-expand {
+  display: none;
+}
+
+#formation-picker {
+  position: relative;
+  text-align: center;
+  top: 670px;
+  left: 10px;
+  width: 87px;
+  height: 32px;
+  background-color: #fff;
+}
+
+form * {
+  margin-top: 5px;
+  padding: 8px;
+}
+
+form label {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+}
+
+form label:first-of-type {
+  margin-top: 100px;
+}
+
+form input[type="text"] {
+  display: inline-block;
+  width: 77%;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h4 {
+  padding: 10px;
+  margin-left: 10px;
+  width: 90%;
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+  margin-top: 100px;
+}
