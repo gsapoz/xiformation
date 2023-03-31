@@ -56,9 +56,9 @@ app.get("/formations/:selection", (req, res) => {
     if (err) throw err;
     data = JSON.parse(data);
 
-    const target = data.find((index) => index.formation === selection);
+    const props = data.find((formation) => formation.formation === selection);
 
-    res.json(target);
+    res.json(props);
   });
 });
 

@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Builder from "./components/Builder";
 import Form from "./components/Form";
 
-function App() {
-  const [Formations, setFormationData] = useState([{}]);
-  const [Players, setPlayerCollection] = useState([{}]);
+function lol() {
+  console.log("lol");
+}
 
-  useEffect(() => {
-    fetch("/formations")
-      .then((response) => response.json())
-      .then((data) => {
-        setFormationData(data);
-      });
-  }, []);
+function App() {
+  const [Players, setPlayerCollection] = useState([{}]);
+  const [Formation, setFormationData] = useState([{}]);
 
   useEffect(() => {
     fetch("/players")
@@ -22,24 +17,37 @@ function App() {
       });
   });
 
-  /**
-   *
-   *  We did this all wrong, lol
-   *
-   *  We need to load all the div components in this page at once and figure out module logic later.
-   *
-   *  Procedure:
-   *
-   *  1. Implement Player.jsx, parameters must include Player Object and X/Y Positions
-   *  2. Implement Input.jsx, this is the form field, pass in Position and Value, must have autocomplete (see: /player_names)
-   *  3. in the server/index.js file, we need to create a route that searches formations.json by formation name (/formations/{selection})
-   *
-   *
-   */
+  useEffect(() => {
+    fetch("/formations/433")
+      .then((response) => response.json())
+      .then((data) => {
+        setFormationData(data);
+      });
+  }, []);
+
   return (
     <div class="section">
-      <Builder data={Formations} formation={"433"} />
-      <Form data={Players} formation={"433"} list={Formations} />
+      <div class="pitch-container">
+        <div class="pitch">
+          <form>
+            <select id="formation-picker" onChange={lol}>
+              <option value="433">433</option>
+              <option value="442">442</option>
+              <option value="4312">4312</option>
+              <option value="433">4141</option>
+              <option value="442">343</option>
+              <option value="4312">3412</option>
+              <option value="4312">3133</option>
+              <option value="4312">3331</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div class="form-container">
+        <Form formation={Formation} />
+
+        <h4>XI Formation!</h4>
+      </div>
     </div>
   );
 }

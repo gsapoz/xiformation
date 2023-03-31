@@ -1,52 +1,24 @@
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 
-function Form({ formation, data, list }) {
-  const inputRef = useRef(null);
-  const [value, setValue] = useState("");
+// function Form({ formation, players }) {
+function Form({ formation }) {
+  // const inputRef = useRef(null);
+  // const [value, setValue] = useState("");
 
-  function handleChange() {
-    const currentValue = inputRef.current.value;
-    setValue(currentValue);
-  }
+  // function handleChange() {
+  //   const currentValue = inputRef.current.value;
+  //   setValue(currentValue);
+  // }
 
   return (
-    <div class="form-container">
-      <form>
-        <label for="email">LW</label>
-        <input type="text" id="CF" value={data[0].name} />
-
-        <label for="email">CF</label>
-        <input type="text" id="CF" value={data[0].name} />
-
-        <label for="phone">RW</label>
-        <input type="text" id="RW" value={formation} />
-
-        <label for="address1">LCM</label>
-        <input type="text" id="LCM" />
-
-        <label for="address2">CM</label>
-        <input type="text" id="CM" />
-
-        <label for="city">RCM</label>
-        <input type="text" id="RCM" />
-
-        <label for="state">LB</label>
-        <input type="text" id="LB" />
-
-        <label for="zip">LCB</label>
-        <input type="text" id="LCB" />
-
-        <label for="country">RCB</label>
-        <input type="text" id="RCB" />
-
-        <label for="username">RB</label>
-        <input type="text" id="RB" />
-
-        <label for="password">GK</label>
-        <input type="text" id="GK" />
-      </form>
-      <h4>XI Formation!</h4>
-    </div>
+    <form>
+      {formation.positions.map((position) => (
+        <div class="input-container">
+          <label for={position}>{position}</label>
+          <input type="text" id={position} />
+        </div>
+      ))}
+    </form>
   );
 }
 
