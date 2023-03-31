@@ -1,15 +1,15 @@
-function Form({ data }) {
+function Form({ formation, data, list }) {
   return (
     <div class="form-container">
       <form>
         <label for="name">LW</label>
-        <input type="text" id="LW" />
+        <input type="text" id="LW" value={data[250].name} />
 
         <label for="email">CF</label>
-        <input type="text" id="CF" />
+        <input type="text" id="CF" value={data[0].name} />
 
         <label for="phone">RW</label>
-        <input type="text" id="RW" />
+        <input type="text" id="RW" value={formation} />
 
         <label for="address1">LCM</label>
         <input type="text" id="LCM" />

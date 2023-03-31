@@ -16,7 +16,7 @@ function Pitch({ data }) {
         />
       ))}
       <form>
-        <select id="formation-picker" name="color">
+        <select id="formation-picker">
           <option value="433">433</option>
           <option value="442">442</option>
           <option value="4312">4312</option>
