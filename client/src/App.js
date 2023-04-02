@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Form from "./components/Form";
-import shout from "./components/Player";
+import Player from "./components/Player";
 
 function App() {
-  const [Players, setPlayerCollection] = useState([{}]);
   const [formation, setFormationData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/players")
-      .then((response) => response.json())
-      .then((data) => {
-        setPlayerCollection(data);
-      });
-  }, []);
 
   useEffect(() => {
     fetch("/formations/433")
@@ -32,10 +23,27 @@ function App() {
       });
   };
 
+  if (!formation || !formation.positions) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="section">
       <div className="pitch-container">
         <div className="pitch">
+          {formation.left.map((x, key) => {
+            const playerProps = {
+              position: "",
+              x_axis: x,
+              y_axis: formation.top[key],
+              image:
+                "https://www.fotmob.com/_next/static/media/player_fallback.9cac7bea.png",
+              name: "",
+            };
+
+            return <Player {...playerProps} />;
+          })}
+
           <form>
             <select id="formation-picker" onChange={formationSelected}>
               <option value="433">433</option>

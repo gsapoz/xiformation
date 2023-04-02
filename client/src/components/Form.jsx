@@ -60,9 +60,10 @@ function Form({ formation }) {
     });
     input.addEventListener("change", (event) => {
       let name = event.target.value;
-      console.log(name);
+      // console.log(name);
+
+      setPlayer(id);
       clearField();
-      //setPlayer(name);
     });
   }
 
