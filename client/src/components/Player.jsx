@@ -9,7 +9,7 @@ const Player = (props) => {
     top: props.top,
   };
   return (
-    <div class="player" id={props.position} style={playerStyle}>
+    <div className="player" id={props.position} style={playerStyle}>
       <img src={url} />
       <a>{props.name}</a>
     </div>

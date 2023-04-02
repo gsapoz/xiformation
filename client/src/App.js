@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Form from "./components/Form";
 
-function lol() {
-  console.log("lol");
-}
-
 function App() {
   const [Players, setPlayerCollection] = useState([{}]);
-  const [Formation, setFormationData] = useState([{}]);
+  const [formation, setFormationData] = useState([{}]);
+  const [formationFetched, setFormationFetched] = useState(false);
 
   useEffect(() => {
     fetch("/players")
@@ -15,37 +12,47 @@ function App() {
       .then((data) => {
         setPlayerCollection(data);
       });
-  });
+  }, []);
 
   useEffect(() => {
     fetch("/formations/433")
+      //defaults to the first option on load
       .then((response) => response.json())
       .then((data) => {
         setFormationData(data);
       });
   }, []);
 
+  const handleFormationChange = (event) => {
+    const formationId = event.target.value;
+    fetch(`/formations/${formationId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        // setFormationData(data);
+        // setFormationFetched(true);
+      });
+  };
+
   return (
-    <div class="section">
-      <div class="pitch-container">
-        <div class="pitch">
+    <div className="section">
+      <div className="pitch-container">
+        <div className="pitch">
           <form>
-            <select id="formation-picker" onChange={lol}>
+            <select id="formation-picker" onChange={handleFormationChange}>
               <option value="433">433</option>
               <option value="442">442</option>
               <option value="4312">4312</option>
-              <option value="433">4141</option>
-              <option value="442">343</option>
-              <option value="4312">3412</option>
-              <option value="4312">3133</option>
-              <option value="4312">3331</option>
+              <option value="4141">4141</option>
+              <option value="343">343</option>
+              <option value="3412">3412</option>
+              <option value="3133">3133</option>
+              <option value="3331">3331</option>
             </select>
           </form>
         </div>
       </div>
-      <div class="form-container">
-        <Form formation={Formation} />
-
+      <div className="form-container">
+        <Form formation={formation} />
         <h4>XI Formation!</h4>
       </div>
     </div>
