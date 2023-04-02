@@ -4,7 +4,6 @@ import Form from "./components/Form";
 function App() {
   const [Players, setPlayerCollection] = useState([{}]);
   const [formation, setFormationData] = useState([{}]);
-  const [formationFetched, setFormationFetched] = useState(false);
 
   useEffect(() => {
     fetch("/players")
@@ -23,13 +22,12 @@ function App() {
       });
   }, []);
 
-  const handleFormationChange = (event) => {
+  const formationSelected = (event) => {
     const formationId = event.target.value;
     fetch(`/formations/${formationId}`)
       .then((response) => response.json())
       .then((data) => {
-        // setFormationData(data);
-        // setFormationFetched(true);
+        setFormationData(data);
       });
   };
 
@@ -38,7 +36,7 @@ function App() {
       <div className="pitch-container">
         <div className="pitch">
           <form>
-            <select id="formation-picker" onChange={handleFormationChange}>
+            <select id="formation-picker" onChange={formationSelected}>
               <option value="433">433</option>
               <option value="442">442</option>
               <option value="4312">4312</option>

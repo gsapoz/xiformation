@@ -2,13 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 
 // function Form({ formation, players }) {
 function Form({ formation }) {
-  useEffect(() => {
-    if (formation) {
-      console.log("Formation set:", formation);
-    } else {
-      console.log("Formation is undefined.");
-    }
-  }, [formation]);
+  useEffect(() => {}, [formation]);
 
   if (!formation) {
     return <p>Loading...</p>;
