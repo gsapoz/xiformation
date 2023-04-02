@@ -1,6 +1,10 @@
 import React from "react";
 import "../index.css";
 
+export function setPlayer(id) {
+  let player = document.getElementById(id);
+}
+
 const Player = (props) => {
   const baseImgUrl = "https://d153u3nqeqj1g3.cloudfront.net/";
   const url = baseImgUrl + props.id + ".png";
