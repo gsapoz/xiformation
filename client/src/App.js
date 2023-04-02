@@ -33,7 +33,7 @@ function App() {
         <div className="pitch">
           {formation.left.map((x, key) => {
             const playerProps = {
-              position: "",
+              position: formation.positions[key],
               x_axis: x,
               y_axis: formation.top[key],
               image:
@@ -41,7 +41,7 @@ function App() {
               name: "",
             };
 
-            return <Player {...playerProps} />;
+            return <Player key={key} {...playerProps} />;
           })}
 
           <form>

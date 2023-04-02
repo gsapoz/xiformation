@@ -51,13 +51,14 @@ function Form({ formation }) {
 
   function setActive(id) {
     let input = document.getElementById(id);
+
     input.addEventListener("input", (event) => {
       if (event.target.value.length >= 4) {
         let options = searchPlayer(event.target.value);
-
         let picker = showOptions(input, options);
       }
     });
+
     input.addEventListener("change", (event) => {
       let name = event.target.value;
       // console.log(name);
