@@ -8,10 +8,11 @@ Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered 
 - Autocorrect (feature already implemented, but making an aesthetically clean version is very necessary)
 - User console featuring past created squads, with private/public toggle and sharing commands
 - Player search, with smart routes so you can pull up player stats via address bar (ie: https://11formation/player/Messi)
+- Total Responsiviity (is that the word?) across all devices.  
 
-## Video Demo (of the product so far)
+## Product Demo (Beta)
 
-[![Product Demo (Beta)]](https://watch.screencastify.com/v/GAkJ68YKmnaK99yEwiua)
+https://watch.screencastify.com/v/GAkJ68YKmnaK99yEwiua
 
 ## Available Scripts
 
