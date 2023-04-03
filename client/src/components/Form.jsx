@@ -55,7 +55,7 @@ function Form({ formation }) {
     input.addEventListener("input", (event) => {
       if (event.target.value.length >= 4) {
         let options = searchPlayer(event.target.value);
-        let picker = showOptions(input, options);
+        // let picker = showOptions(input, options);
       }
     });
 

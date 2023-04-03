@@ -1,12 +1,17 @@
 # 11Formation
 
-Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered by Javascript. 
+Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered by Javascript.
 
-## Features 
-- User console featuring past created squads, with private/public toggle and sharing commands 
+## TO-DO
+
+- Player Images, in the JSON and on the formation builder UI, starting with the topfive-api json
+- Autocorrect (feature already implemented, but making an aesthetically clean version is very necessary)
+- User console featuring past created squads, with private/public toggle and sharing commands
 - Player search, with smart routes so you can pull up player stats via address bar (ie: https://11formation/player/Messi)
 
-## Task List
+## Video Demo (of the product so far)
+
+[![Product Demo (Beta)]](https://watch.screencastify.com/v/GAkJ68YKmnaK99yEwiua)
 
 ## Available Scripts
 
