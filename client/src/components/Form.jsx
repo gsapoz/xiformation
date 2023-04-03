@@ -46,7 +46,7 @@ function Form({ formation }) {
       picker_exists.remove();
     }
 
-    // console.log(input.target.value);
+    // input.target.remove
   }
 
   function setActive(id) {
@@ -61,7 +61,6 @@ function Form({ formation }) {
 
     input.addEventListener("change", (event) => {
       let name = event.target.value;
-      // console.log(name);
 
       setPlayer(id);
       clearField();
