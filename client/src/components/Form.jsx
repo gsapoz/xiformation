@@ -3,7 +3,7 @@ import { setPlayer } from "./Player";
 
 function Form({ formation }) {
   const [players, setPlayerCollection] = useState([{}]);
-
+  const [images, setPlayerImages] = useState([{}]);
   useEffect(() => {}, [formation]);
 
   useEffect(() => {
@@ -11,6 +11,14 @@ function Form({ formation }) {
       .then((response) => response.json())
       .then((data) => {
         setPlayerCollection(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("/player_images")
+      .then((response) => response.json())
+      .then((data) => {
+        setPlayerImages(data);
       });
   }, []);
 
@@ -61,8 +69,7 @@ function Form({ formation }) {
 
     input.addEventListener("change", (event) => {
       let name = event.target.value;
-
-      setPlayer(id);
+      setPlayer(id, images);
       clearField();
     });
   }

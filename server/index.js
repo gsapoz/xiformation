@@ -37,6 +37,16 @@ app.get("/player_names", (req, res) => {
   res.json(player_names);
 });
 
+app.get("/player_images", (req, res) => {
+  /** Player Images, mapped to the name of the players */
+  const players = topfive.getAllPlayers();
+  let player_names = [];
+  for (let i = 0; i < players.length; i++) {
+    player_names.push(players[i].name, players[i].image);
+  }
+  res.json(player_names);
+});
+
 app.get("/formations", (req, res) => {
   /** All formations and all their x/y-axis metrics  */
   fs.readFile("components/formations.json", "utf8", function (err, data) {

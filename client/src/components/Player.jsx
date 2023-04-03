@@ -1,13 +1,25 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../index.css";
 
-export function setPlayer(role) {
+export function setPlayer(role, images) {
   const input = document.getElementById(role);
   const player = document.getElementById(role + "p");
   const nametag = document.getElementById(role + "n");
   const lastname = getLastName(input.value);
   nametag.className = input.value;
   nametag.textContent = lastname;
+  const image_url = getPlayerImage("Declan Rice", images);
+  player.firstChild.setAttribute("src", image_url);
+}
+
+function getPlayerImage(name, players) {
+  const index = players.findIndex((player) =>
+    player.toLowerCase().includes(name.toLowerCase())
+  );
+
+  const urlindex = index + 1;
+
+  return players[urlindex];
 }
 
 function getLastName(fullname) {
