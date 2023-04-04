@@ -1,3 +1,5 @@
+import { setPlayer } from "../components/Player";
+
 export function autofillPlayers(input, options) {
   removePickers();
   const picker = document.createElement("div");
@@ -9,6 +11,7 @@ export function autofillPlayers(input, options) {
     option.textContent = options[i];
     option.addEventListener("click", function (fillInput) {
       input.value = options[i];
+      setPlayer(input.id, options);
       removePickers();
     });
     picker.appendChild(option);

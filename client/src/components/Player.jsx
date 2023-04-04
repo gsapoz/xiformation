@@ -8,7 +8,7 @@ export function setPlayer(role, images) {
   const lastname = getLastName(input.value);
   nametag.className = input.value;
   nametag.textContent = lastname;
-  const image_url = getPlayerImage("Declan Rice", images);
+  const image_url = getPlayerImage("Declan Rice", images); //for example
   player.firstChild.setAttribute("src", image_url);
 }
 
