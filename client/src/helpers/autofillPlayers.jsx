@@ -10,7 +10,6 @@ export function autofillPlayers(input, options) {
     option.addEventListener("click", function (fillInput) {
       input.value = options[i];
       removePickers();
-      //   console.log(input.value);
     });
     picker.appendChild(option);
   }
@@ -22,6 +21,5 @@ function removePickers() {
   const picker_exists = document.getElementById("player-picker");
   if (picker_exists) {
     picker_exists.remove();
-  } else {
   }
 }

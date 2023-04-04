@@ -54,6 +54,19 @@ function Form({ formation }) {
       }
     });
 
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Backspace") {
+        if (event.target.value.length >= 4) {
+          let options = searchPlayer(event.target.value);
+          autofillPlayers(input, options);
+        } else {
+          const picker_exists = document.getElementById("player-picker");
+          if (picker_exists) {
+            picker_exists.remove();
+          }
+        }
+      }
+    });
     input.addEventListener("change", (event) => {
       let name = event.target.value;
       setPlayer(id, images);
