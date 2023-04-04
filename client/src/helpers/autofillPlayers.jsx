@@ -6,7 +6,7 @@ export function autofillPlayers(input, options) {
   picker.setAttribute("id", "player-picker");
   picker.setAttribute("class", "autocomplete-items");
 
-  for (let i = 0; i < options.length; i++) {
+  for (let i = 0; i < options.length; i += 2) {
     let option = document.createElement("div");
     option.textContent = options[i];
     option.addEventListener("click", function (fillInput) {

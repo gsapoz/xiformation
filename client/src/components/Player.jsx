@@ -8,13 +8,18 @@ export function setPlayer(role, images) {
   const lastname = getLastName(input.value);
   nametag.className = input.value;
   nametag.textContent = lastname;
-  const image_url = getPlayerImage("Declan Rice", images); //for example
+  const image_url = getPlayerImage(input.value, images);
   player.firstChild.setAttribute("src", image_url);
 }
 
 function getPlayerImage(name, players) {
   const index = players.findIndex((player) =>
-    player.toLowerCase().includes(name.toLowerCase())
+    // player.toLowerCase().includes(name.toLowerCase())
+    player
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .includes(name.normalize("NFD").toLowerCase())
   );
 
   const urlindex = index + 1;
