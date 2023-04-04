@@ -5,10 +5,9 @@ Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered 
 ## TO-DO
 
 - Player Images, in the JSON and on the formation builder UI, starting with the topfive-api json
-- Autocorrect (feature already implemented, but making an aesthetically clean version is very necessary)
 - User console featuring past created squads, with private/public toggle and sharing commands
 - Player search, with smart routes so you can pull up player stats via address bar (ie: https://11formation/player/Messi)
-- Total Responsiviity (is that the word?) across all devices.  
+- Total Responsiviity (is that the word?) across all devices.
 
 ## Product Demo (Beta)
 
