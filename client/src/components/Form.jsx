@@ -116,8 +116,7 @@ export default Form;
 
 /**
  * TO-DO:
- *  1. When you click down or up on the direction pad, it has to navigate the autofill, and enter selects it
- *  2. When you click on the document, it has to terminate the autofill and clear the current input field.
- *  3. When a formation is swtiched, tmeporarily store all current input values and then reset them
- *  4. Make the player cards clickable, when its clicked you should be able to edit the player
+ *  1. When you click on the document, it has to terminate the autofill and clear the current input field.
+ *  2. When a formation is swtiched, tmeporarily store all current input values and then reset them
+ *  3. Make the player cards clickable, when its clicked you should be able to edit the player
  */

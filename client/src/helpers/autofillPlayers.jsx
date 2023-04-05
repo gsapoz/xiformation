@@ -9,7 +9,7 @@ export function autofillPlayers(input, options) {
   for (let i = 0; i < options.length; i += 2) {
     let option = document.createElement("div");
     option.textContent = options[i];
-    option.addEventListener("click", function (fillInput) {
+    option.addEventListener("click", function (event) {
       input.value = options[i];
       setPlayer(input.id, options);
       removePickers();
@@ -38,8 +38,8 @@ export function autofillPlayers(input, options) {
             nextItem.classList.add("autocomplete-active");
           } else {
             pickerItems[0].classList.add("autocomplete-active");
-            i++;
           }
+          i++;
 
           break;
         case "ArrowUp":
@@ -49,13 +49,13 @@ export function autofillPlayers(input, options) {
             prevItem.classList.add("autocomplete-active");
           } else {
             pickerItems[0].classList.add("autocomplete-active");
-            i++;
           }
+          i++;
 
           break;
         case "Enter":
-          //check if the active option is an option before you remove picker
           if (activeItem) {
+            input.value = activeItem.textContent;
             removePickers();
           } else {
           }
