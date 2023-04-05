@@ -18,6 +18,52 @@ export function autofillPlayers(input, options) {
   }
 
   input.insertAdjacentElement("afterend", picker);
+
+  let i = 0;
+
+  document.addEventListener("keydown", function (event) {
+    const pickerItems = document.querySelectorAll("#player-picker div");
+
+    if (pickerItems.length > 0) {
+      let activeItem = document.querySelector(
+        "#player-picker .autocomplete-active"
+      );
+
+      switch (event.key) {
+        case "ArrowDown":
+          if (activeItem) {
+            activeItem.classList.remove("autocomplete-active");
+            let nextItem =
+              activeItem.nextSibling || pickerItems[pickerItems.length - 1];
+            nextItem.classList.add("autocomplete-active");
+          } else {
+            pickerItems[0].classList.add("autocomplete-active");
+            i++;
+          }
+
+          break;
+        case "ArrowUp":
+          if (activeItem) {
+            activeItem.classList.remove("autocomplete-active");
+            let prevItem = activeItem.previousSibling || pickerItems[0];
+            prevItem.classList.add("autocomplete-active");
+          } else {
+            pickerItems[0].classList.add("autocomplete-active");
+            i++;
+          }
+
+          break;
+        case "Enter":
+          //check if the active option is an option before you remove picker
+          if (activeItem) {
+            removePickers();
+          } else {
+          }
+        default:
+          break;
+      }
+    }
+  });
 }
 
 function removePickers() {
