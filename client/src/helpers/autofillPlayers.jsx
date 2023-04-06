@@ -20,43 +20,38 @@ export function autofillPlayers(input, options) {
   input.insertAdjacentElement("afterend", picker);
 
   document.addEventListener("keydown", function (event) {
-    const pickerItems = document.querySelectorAll("#player-picker div");
+    let pickerItems = document.querySelectorAll("#player-picker div");
 
     if (pickerItems.length > 0) {
       let activeItem = document.querySelector(
         "#player-picker .autocomplete-active"
       );
-      switch (event.key) {
-        case "ArrowDown":
-          if (activeItem) {
+
+      if (activeItem) {
+        switch (event.key) {
+          case "ArrowDown":
             activeItem.classList.remove("autocomplete-active");
             let nextItem =
               activeItem.nextSibling || pickerItems[pickerItems.length - 1];
             nextItem.classList.add("autocomplete-active");
-          } else {
-            pickerItems[0].classList.add("autocomplete-active");
-          }
-
-          break;
-        case "ArrowUp":
-          if (activeItem) {
+            break;
+          case "ArrowUp":
             activeItem.classList.remove("autocomplete-active");
             let prevItem = activeItem.previousSibling || pickerItems[0];
             prevItem.classList.add("autocomplete-active");
-          } else {
-            pickerItems[0].classList.add("autocomplete-active");
-          }
-
-          break;
-        case "Enter":
-          if (activeItem) {
+            break;
+          case "Enter":
             input.value = activeItem.textContent;
-            activeItem.classList.remove("autocomplete-active");
             removePickers();
-          }
-          break;
-        default:
-          break;
+            break;
+          default:
+            activeItem.classList.remove("autocomplete-active");
+            break;
+        }
+      } else {
+        if (event.key == "ArrowDown" || event.key == "ArrowUp") {
+          pickerItems[0].classList.add("autocomplete-active");
+        }
       }
     }
   });
@@ -67,4 +62,6 @@ function removePickers() {
   if (picker_exists) {
     picker_exists.remove();
   }
+
+  document.removeEventListener("keydown", function () {});
 }

@@ -10,6 +10,13 @@ export function setPlayer(role, images) {
   nametag.textContent = lastname;
   const image_url = getPlayerImage(input.value, images);
   player.firstChild.setAttribute("src", image_url);
+
+  let activeItem = document.querySelector(
+    "#player-picker .autocomplete-active"
+  );
+  if (activeItem) {
+    activeItem.classList.remove("autocomplete-active");
+  }
 }
 
 function getPlayerImage(name, players) {
