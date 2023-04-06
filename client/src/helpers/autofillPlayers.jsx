@@ -19,8 +19,6 @@ export function autofillPlayers(input, options) {
 
   input.insertAdjacentElement("afterend", picker);
 
-  let i = 0;
-
   document.addEventListener("keydown", function (event) {
     const pickerItems = document.querySelectorAll("#player-picker div");
 
@@ -28,7 +26,6 @@ export function autofillPlayers(input, options) {
       let activeItem = document.querySelector(
         "#player-picker .autocomplete-active"
       );
-
       switch (event.key) {
         case "ArrowDown":
           if (activeItem) {
@@ -39,7 +36,6 @@ export function autofillPlayers(input, options) {
           } else {
             pickerItems[0].classList.add("autocomplete-active");
           }
-          i++;
 
           break;
         case "ArrowUp":
@@ -50,15 +46,15 @@ export function autofillPlayers(input, options) {
           } else {
             pickerItems[0].classList.add("autocomplete-active");
           }
-          i++;
 
           break;
         case "Enter":
           if (activeItem) {
             input.value = activeItem.textContent;
+            activeItem.classList.remove("autocomplete-active");
             removePickers();
-          } else {
           }
+          break;
         default:
           break;
       }
