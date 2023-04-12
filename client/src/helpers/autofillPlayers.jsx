@@ -42,6 +42,7 @@ export function autofillPlayers(input, options) {
             break;
           case "Enter":
             input.value = activeItem.textContent;
+            // setPlayer(activeItem.textContent, this.images);
             removePickers();
             break;
           default:

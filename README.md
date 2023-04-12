@@ -11,7 +11,7 @@ Mobile-first/Multi-Platform squad builder for Football's Top 5 leagues, powered 
 
 ## Product Demo (Beta)
 
-https://watch.screencastify.com/v/GAkJ68YKmnaK99yEwiua
+https://watch.screencastify.com/v/Tr9pPP4W21GH81tKfLgn
 
 ## Available Scripts
 
