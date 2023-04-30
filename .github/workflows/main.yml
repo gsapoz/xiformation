@@ -1,0 +1,28 @@
+name: Your Workflow Name
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install client dependencies
+        run: npm install
+        working-directory: ./client
+
+      - name: Start the client app
+        run: npm start
+        working-directory: ./client
+
+      - name: Install server dependencies
+        run: npm install
+        working-directory: ./server
+
+      - name: Run server development server
+        run: npm run dev
+        working-directory: ./server
