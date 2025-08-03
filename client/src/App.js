@@ -37,7 +37,7 @@ function App() {
               x_axis: x,
               y_axis: formation.top[key],
               image:
-                "https://www.fotmob.com/_next/static/media/player_fallback.9cac7bea.png",
+                "/placeholder-img.png",
               name: "",
             };
 
